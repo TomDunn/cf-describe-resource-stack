@@ -1,4 +1,4 @@
-# Describe CloudFormation Stack for Resource
+# Inspect a Lambda's CloudFormation Stack
 
 Helps [Lambda Functions][1] resolve dynamic configuration values such as the names of other resources in their [CloudFormation][2] stack.
 
