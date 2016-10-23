@@ -1,6 +1,6 @@
 {
   "name": "lambda-cf-stack-inspection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Describe the CloudFormation stack that a Lambda function belongs to",
   "main": "index.js",
   "scripts": {
