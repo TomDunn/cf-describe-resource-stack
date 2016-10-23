@@ -12,5 +12,13 @@
     "configuration"
   ],
   "author": "https://www.npmjs.com/~tomdunn",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "aws-sdk": "^2.6.11",
+    "chai": "^3.5.0",
+    "jsonfile": "^2.4.0",
+    "mocha": "^3.1.2",
+    "sinon": "^1.17.6",
+    "yargs": "^6.3.0"
+  }
 }

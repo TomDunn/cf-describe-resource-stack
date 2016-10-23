@@ -1,0 +1,16 @@
+{
+  "StackResources": [
+    {
+      "LogicalResourceId": "LambdaFunc",
+      "ResourceType": "AWS::Lambda::Function"
+    },
+    {
+      "LogicalResourceId": "DynamoDBTable",
+      "ResourceType": "AWS::DynamoDB::Table"
+    },
+    {
+      "LogicalResourceId": "DynamoDBTable2",
+      "ResourceType": "AWS::DynamoDB::Table"
+    }
+  ]
+}

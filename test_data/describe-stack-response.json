@@ -1,0 +1,22 @@
+{
+  "Stacks": [
+    {
+      "Parameters": [
+        {
+          "ParameterKey": "Name",
+          "ParameterValue": "Foo"
+        },
+        {
+          "ParameterKey": "SomeKeyName",
+          "ParameterValue": "SomeKeyVal"
+        }
+      ],
+      "Outputs": [
+        {
+          "OutputKey": "SomeOutputKey",
+          "OutputValue": "SomeOutputVal"
+        }
+      ]
+    }
+  ]
+}
