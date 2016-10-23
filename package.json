@@ -1,14 +1,15 @@
 {
-  "name": "cf-describe-stack",
+  "name": "lambda-cf-stack-inspection",
   "version": "1.0.0",
-  "description": "Describe the CloudFormation stack that a component belongs to",
+  "description": "Describe the CloudFormation stack that a Lambda function belongs to",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha ./spec.js"
   },
   "keywords": [
     "aws",
     "cloudformation",
+    "lambda",
     "configuration"
   ],
   "author": "https://www.npmjs.com/~tomdunn",
