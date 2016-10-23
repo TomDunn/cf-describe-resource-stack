@@ -7,8 +7,12 @@ const argv      = require('yargs')
     .default('region', 'us-east-1')
     .argv;
 
-// configure the AWS SDK
+// configure the AWS SDK with a region
 AWS.config.region = argv.region;
+
+// the code should have access somehow to AWS credentials - for Lambda this happens automatically 
+// because the Lambda function is assigned an IAM role. Ensure that the Lambda IAM role has permissions
+// to call describeStackResources and describeStacks for the CloudFormation stack it belongs to.
 
 // build the CF description helper
 const cfUtil = require('./index')(AWS);
