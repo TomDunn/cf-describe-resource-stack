@@ -1,0 +1,16 @@
+{
+  "name": "cf-describe-stack",
+  "version": "1.0.0",
+  "description": "Describe the CloudFormation stack that a component belongs to",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "aws",
+    "cloudformation",
+    "configuration"
+  ],
+  "author": "https://www.npmjs.com/~tomdunn",
+  "license": "ISC"
+}
