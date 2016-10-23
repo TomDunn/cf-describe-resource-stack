@@ -10,13 +10,35 @@ This module assumes that it is being used by a Lambda Function that is managed b
 
 ## Installation
 
-TODO - not imported into NPM yet.
+```sh
+npm install --save lambda-cf-stack-inspection
+```
 
 ## Usage
 
-TODO
+### Setting up the module
 
-## Example with Lambda
+```javascript
+const AWS = require('aws-sdk');
+// configure the AWS SDK if needed, for example by setting the region
+AWS.config.update({region: 'us-east-1'});
+
+// requiring the module returns a factory function which takes the configued AWS SDK object
+const cfUtil = require('lambda-cf-stack-inspection')(AWS);
+```
+### Using
+
+```javascript
+// CloudFormation has a concept of a physical resource ID. For the Lambda Functions this is the function name
+// Here physicalResourceId could come from process.env.AWS_LAMBDA_FUNCTION_NAME
+cfUtil.getStackDescriptionForResource(physicalResourceId).then(stackInfo => {
+  stackInfo.resources(); // returns an array of CloudFormation resources in the stack
+  stackInfo.resourcesByType(); // returns an object with structure: CloudFormationResourceType => [resources]
+  stackInfo.resourcesByLogicalId(); // returns an object keyed by the LogicalId of the resources
+  stackInfo.stackParameters(); // returns the stack parameters
+  stackInfo.stackOutputs(); // returns the Outputs of the stack
+});
+```
 
 [1]: https://aws.amazon.com/lambda/
 [2]: https://aws.amazon.com/cloudformation/
